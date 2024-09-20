@@ -1,0 +1,102 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    position: fixed; /* Fix it to the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Navbar-left styles */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* Adjust logo size */
+}
+
+/* Navbar-center styles */
+.navbar-center {
+    display: flex;
+    gap: 20px; /* Space between links */
+    justify-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap; /* Wrap links on small screens */
+}
+
+.nav-link {
+    color: white; /* White text for links */
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+}
+
+/* Navbar-right styles */
+.navbar-right {
+    display: flex;
+    gap: 15px; /* Space between social media icons */
+}
+
+.social-media-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s;
+}
+
+.social-media-link:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        text-align: center; /* Center align text */
+        padding: 15px; /* Add padding */
+    }
+
+    .navbar-left {
+        margin-bottom: 10px; /* Add space below logo */
+    }
+
+    .navbar-center {
+        margin-bottom: 10px; /* Add space below links */
+        gap: 10px; /* Reduce gap between links */
+        width: 100%; /* Full width */
+    }
+
+    .navbar-right {
+        margin-bottom: 10px; /* Add space below social icons */
+        justify-content: center; /* Center the icons */
+        width: 100%; /* Full width */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 400px) {
+    .navbar {
+        padding: 10px; /* Less padding on small screens */
+    }
+
+    .nav-link {
+        font-size: 0.9rem; /* Smaller font for nav links */
+    }
+
+    .social-media-link {
+        font-size: 18px; /* Smaller icon size */
+    }
+}

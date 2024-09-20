@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Servers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+       /* General Styles */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navo {
+    background-color: #005f73;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.navo a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navo-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navo-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+    justify-content: center; /* Center the content */
+}
+
+.video-container {
+    flex: 1;
+    min-width: 300px; /* Minimum width to handle smaller screens */
+    max-width: 600px; /* Maximum width for larger screens */
+    width: 100%;
+}
+
+/* Cloud Tags Container */
+.cloud-tags-right-container {
+    flex: 1;
+    max-width: 400px; /* Max width for cloud tags container */
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.cloud-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cloud-tags-title {
+    font-size: 24px;
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+.tag-right {
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px;
+    display: inline-block;
+    width: calc(33.33% - 10px);
+    box-sizing: border-box;
+}
+
+.tag-right:hover {
+    background-color: #0a9396;
+    transform: scale(1.05);
+}
+
+.video-container video {
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+/* Server Buttons */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    margin: 10px 10px;
+}
+
+.nav-link {
+    background-color: #94d2bd;
+    color: #001219;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #0a9396;
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: #005f73;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer .legal {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .cloud-tags-right-container, .video-container {
+        max-width: 100%;
+    }
+
+    .navo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navo-center {
+        margin: 10px 0;
+    }
+
+    .navo-right {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container, .cloud-tags-right-container {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .cloud-tags-right-container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navo {
+        padding: 10px;
+    }
+
+    .nav-link {
+        padding: 8px 15px;
+    }
+
+    .tag-right {
+        padding: 8px 10px;
+        width: calc(50% - 10px); /* عرض أكبر للتاقز في الشاشات الصغيرة */
+    }
+
+    .navbar ul {
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .navbar ul li {
+        margin: 5px;
+    }
+
+    .cloud-tags-title {
+        font-size: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navo">
+        <div class="navo-left">
+            <a href="#" class="logo">Cinema<span style="color: #ff0000;">V</span>ip</a>
+        </div>
+        
+        <div class="navo-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="indomi.html" class="nav-link">About</a>
+            <a href="figuare.html" class="nav-link">Movies</a>
+        </div>
+
+        <div class="navo-right">
+            <a href="https://www.facebook.com/" class="social-media-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/" class="social-media-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="social-media-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" class="social-media-link"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="video-container">
+            <h2 id="server-title">اختر سيرفرًا لمشاهدة الفيديو</h2>
+            <video id="video-player" width="600" controls>
+                <source id="video-source" src="" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" onclick="changeVideo('server1')" class="nav-link">Server 1</a></li>
+                    <li><a href="#" onclick="changeVideo('server2')" class="nav-link">Server 2</a></li>
+                    <li><a href="#" onclick="changeVideo('server3')" class="nav-link">Server 3</a></li>
+                    <li><a href="#" onclick="changeVideo('server4')" class="nav-link">Server 4</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cloud-tags-right-container">
+            <h2 class="cloud-tags-title">Tags</h2>
+            <div class="cloud-tags-container">
+                <a href="figuare.html" class="tag-right">#Cinema</a>
+                <a href="figuare.html" class="tag-right">#Movies</a>
+                <a href="figuare.html" class="tag-right">#Action</a>
+                <a href="figuare.html" class="tag-right">#Comedy</a>
+                <a href="figuare.html" class="tag-right">#Drama</a>
+                <a href="figuare.html" class="tag-right">#Adventure</a>
+                <a href="figuare.html" class="tag-right">#Thriller</a>
+                <a href="figuare.html" class="tag-right">#Horror</a>
+                <a href="figuare.html" class="tag-right">#Romance</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <footer>
+        <div class="links">
+            <a href="index.html">Privacy Policy</a>
+            <a href="indomi.html">About</a>
+            <a href="figuare.html">Contact Us</a>
+        </div>
+        <div class="legal">
+            &copy; 2024 CinemaVip. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript function to change the video based on the selected server
+        function changeVideo(server) {
+            const videoPlayer = document.getElementById('video-player');
+            const videoSource = document.getElementById('video-source');
+            const serverTitle = document.getElementById('server-title');
+
+            if (!videoPlayer || !videoSource || !serverTitle) {
+                console.error('Elements not found in the DOM.');
+                return;
+            }
+
+            // Change the video and the title based on the server
+            switch (server) {
+                case 'server1':
+                    videoSource.src = 'Session 3.mp4'; // ضع مسار الفيديو هنا
+                    serverTitle.innerText = 'تشغيل من سيرفر 1';
+                    break;
+                case 'server2':
+                    videoSource.src = 'Session 3.mp4'; // ضع مسار الفيديو هنا
+                    serverTitle.innerText = 'تشغيل من سيرفر 2';
+                    break;
+                case 'server3':
+                    videoSource.src = 'Session 3.mp4'; // ضع مسار الفيديو هنا
+                    serverTitle.innerText = 'تشغيل من سيرفر 3';
+                    break;
+                case 'server4':
+                    videoSource.src = 'Session 3.mp4'; // ضع مسار الفيديو هنا
+                    serverTitle.innerText = 'تشغيل من سيرفر 4';
+                    break;
+                default:
+                    videoSource.src = '';
+                    serverTitle.innerText = 'اختر سيرفرًا لمشاهدة الفيديو';
+            }
+
+            // Reload the video
+            videoPlayer.load();
+        }
+    </script>
+</body>
+</html>

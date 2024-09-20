@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* خلفية داكنة */
+    color: #e0e0e0; /* نص فاتح */
+}
+/* Footer */
+footer {
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color:  #282828; /* لون داكن للفوتر */
+    height: 100px;
+}
+
+/* Video Container */
+.video-container {
+    text-align: center;
+    margin-left: 450px; /* لتوسيع المساحة على اليسار وتحريك الفيديو إلى اليمين */
+    max-width: 600px;
+}
+
+#video-player {
+    width: 100%;
+}
+
+/* Navo (Navbar) */
+.navo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #282828; /* خلفية داكنة أكثر */
+    color: #ffffff; /* نص أبيض */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navo-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navo-center {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff5722; /* لون برتقالي فاتح */
+}
+
+.navo-right {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-media-link:hover {
+    color: #ff5722; /* لون برتقالي فاتح */
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px;
+}
+
+/* Video Container */
+.container {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff; /* نص أبيض */
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff5722; /* لون برتقالي فاتح */
+}
+
+.video-container {
+    text-align: center;
+}
+
+#server-title {
+    margin-bottom: 20px;
+    color: #ffffff; /* نص أبيض */
+}
+
+#video-player {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #282828; /* خلفية داكنة أكثر */
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    list-style: none;
+    gap: 20px;
+}
+
+.socials li a {
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.socials li a:hover {
+    color: #ff5722; /* لون برتقالي فاتح */
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.links li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.links li a:hover {
+    color: #ff5722; /* لون برتقالي فاتح */
+}
+
+.legal {
+    margin-top: 20px;
+    color: #cccccc; /* لون رمادي فاتح */
+    font-size: 14px;
+}
+
+/* Cloud Tags */
+.cloud-tags-right-container {
+    position: fixed;
+    right: 0; /* تضع الحاوية على يمين الشاشة */
+    top: 50%; /* تضع الحاوية في منتصف الشاشة عمودياً */
+    transform: translateY(-50%); /* لضبط الحاوية في المنتصف */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* توزيع الوسوم في صفوف اعتماداً على عرض الشاشة */
+    gap: 10px;
+    padding: 10px;
+    max-width: 320px;
+    justify-content: end;
+}
+
+.cloud-title {
+    color: #ffffff;
+    font-size: xx-large;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    text-align: right;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.tag-right {
+    font-size: 16px;
+    padding: 10px 14px;
+    background-color: #00d5ff; /* لون أزرق فاتح */
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tag-right:hover {
+    background-color: #ff5722; /* لون برتقالي فاتح */
+    transform: scale(1.05);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .cloud-tags-right-container {
+        position: relative;
+        right: 0;
+        top: 20px; /* يتم وضعها أعلى الصفحة */
+        transform: none;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    .tag-right {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
